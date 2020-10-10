@@ -1,0 +1,13 @@
+@media screen and (min-width: 1024px) {
+  #main {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  #left-column {
+    flex: 1 1 auto;
+  }
+  #right-column {
+    width: 456px;
+  }
+}
