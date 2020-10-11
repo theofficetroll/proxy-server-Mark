@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # webpack bundle
-.bundle-proxy.js
+bundle-proxy.js
