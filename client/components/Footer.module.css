@@ -13,7 +13,7 @@ footer {
   padding-bottom: 0px;
 }
 
-.body {
+.footerBody {
   margin-bottom: 16px;
   font-size: 0;
   margin-left: -8px;
@@ -22,12 +22,13 @@ footer {
 
 .subFooter {
   border-top: none;
-  font-size: 0;
+  /* font-size: 0; */
   margin-left: -8px;
   margin-right: -8px;
+  display: flex;
 }
 
-.body > div {
+.footerBody > div {
   display: inline-block;
   font-size: 14px;
   line-height: 1.714285714285714;
@@ -42,9 +43,26 @@ footer {
   padding-right: 8px;
 }
 
+.accordion.first .footerLink > a {
+  color: #fff;
+}
+
+.footerLink, .footerLink > a {
+  color: #7e7e7e;
+}
+
 .socialMenu {
   padding-left: 24px;
   margin-top: 16px;
+}
+
+.subFooter > div {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.subFooter span {
+  color: #7e7e7e;
 }
 
 @media only screen and (min-width: 640px) {
