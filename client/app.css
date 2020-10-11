@@ -44,6 +44,12 @@ input {
   border: 0;
 }
 
+/* Not sure what this does, explore later -- helper classes */
+.ripple {
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
 @media screen and (min-width: 1024px) {
   #main {
     display: flex;

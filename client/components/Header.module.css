@@ -18,6 +18,7 @@
 
 .headerWrapper {
   display: flex;
+  align-items: center;
   position: relative;
   max-width: 1920px;
   opacity: 1;
@@ -48,15 +49,24 @@
 }
 
 .navBar {
-  /* flex-grow: 1;
-  width: 120px;
+  /* I don't know what this does, maybe mobile? */
   position: absolute;
   top: 0;
   right: 44px;
-  bottom: 0; */
+  bottom: 0;
+  flex-grow: 1;
+  width: 120px;
+  /* general stuff */
+  display: block;
+  padding: 0 20px 0 16px;
+  background: transparent;
+  transition: background 10ms, height .15s, width .15s;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.desktopMenu {
+.menuBar {
   display: none;
   position: absolute;
   width: 100%;
@@ -71,7 +81,6 @@
   margin: 0 auto;
   height: 60px;
   overflow: hidden;
-  /* list-style: none; */
 }
 
 .navLinks li {
@@ -89,8 +98,8 @@
 
 .searchBar {
   width: 180px;
-  position: absolute;
-  right: 0;
+  /* position: absolute;
+  right: 0; */
   float: right;
   transform: translateX(0);
   transition: width .25s, transform .35s;
@@ -125,6 +134,26 @@
   transform: translateZ(0);
 }
 
+.accountBtns {
+  text-align: right;
+  display: flex;
+}
+
+.accountBtns > * {
+  display: inline-flex;
+  position: relative;
+  margin-right: 12px;
+  border-radius: 100px;
+  text-align: center;
+  /* flex: 0 0 auto; */
+  align-items: center;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1024px) {
   .brandHeader {
     display: block;
@@ -132,7 +161,12 @@
   .mainHeaderWrapper {
     padding: 0 38px 0 36px;
   }
-  .desktopMenu {
+  .navBar {
+    position: unset;
+    bottom: inherit;
+    top: 0;
+  }
+  .menuBar {
     display: flex;
   }
   .menuLink {
@@ -150,6 +184,9 @@
     top: 2px;
     left: 2px;
     padding: 6px 8px;
+  }
+  .accountBtns {
+    padding-top: 12px;
   }
 }
 

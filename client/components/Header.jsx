@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DesktopMenuLinks from './DesktopMenuLinks.jsx';
+import MenuBar from './MenuBar.jsx';
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -21,21 +21,19 @@ const Header = () => {
         </div>
         <header className={styles.mainHeader}>
           <div className={styles.headerWrapper}>
-            <div className={styles.nikeIcon}>Nike Icon</div>
-              <div className={styles.navBar}>
-                <div className={styles.desktopMenu}>
-                  <DesktopMenuLinks />
-                  <div className={styles.searchBar}>
-                    <input type="text" name="search" autoComplete="off" placeholder="Search"/>
-                    <button>Search Icon</button>
-                  </div>
+            <div className={styles.nikeIcon}>Nike-Icon</div>
+            <div className={styles.navBar}>
+                <MenuBar />
+                <div className={styles.searchBar}>
+                  <input type="text" name="search" autoComplete="off" placeholder="Search"/>
+                  <button>S-Icon</button>
                 </div>
-                <div className={styles.mobileMenu}></div>
-              </div>
-              <div className={styles.accountBtns}>
-                  <div>Favorite icon</div>
-                  <div>Cart icon</div>
-              </div>
+              <div className={styles.mobileMenu}></div>
+            </div>
+            <div className={styles.accountBtns}>
+                <div>Favorite-Icon</div>
+                <div>Cart-Icon</div>
+            </div>
           </div>
         </header>
       </>
