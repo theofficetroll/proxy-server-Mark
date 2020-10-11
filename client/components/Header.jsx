@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MenuBar from './MenuBar.jsx';
+import Banner from './Banner.jsx';
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -36,6 +37,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        <Banner />
       </>
     )
 }

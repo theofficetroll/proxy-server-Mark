@@ -5,7 +5,6 @@ import 'core-js/stable';
 import './app.css';
 
 import Header from './components/Header.jsx';
-import Banner from './components/Banner.jsx';
 import Footer from './components/Footer.jsx';
 
 ReactDOM.render(
@@ -15,12 +14,12 @@ ReactDOM.render(
   document.getElementById('header'),
 );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Banner />
-  </React.StrictMode>,
-  document.getElementById('banner'),
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Banner />
+//   </React.StrictMode>,
+//   document.getElementById('banner'),
+// );
 
 ReactDOM.render(
   <React.StrictMode>
