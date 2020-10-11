@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  border: 0;
   box-sizing: border-box;
   font-size: 100%;
   font: inherit;
@@ -40,12 +41,13 @@ button {
 }
 
 ul {
+  padding-inline-start: 0px;
   list-style: none;
 }
 
-input {
+/* input {
   border: 0;
-}
+} */
 
 /* Not sure what this does, explore later -- helper classes */
 .ripple {
