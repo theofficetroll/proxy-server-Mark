@@ -1,0 +1,24 @@
+.banner {
+  box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px inset;
+  background: rgb(247, 247, 247);
+  min-height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselWrapper {
+  width: 768px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  overflow-x: visible;
+  color: rgb(34,34,34);
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
