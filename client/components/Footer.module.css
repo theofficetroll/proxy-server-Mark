@@ -13,6 +13,40 @@ footer {
   padding-bottom: 0px;
 }
 
+.body {
+  margin-bottom: 16px;
+  font-size: 0;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.subFooter {
+  border-top: none;
+  font-size: 0;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.body > div {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.714285714285714;
+  vertical-align: top;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+}
+
+.linksMenu {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.socialMenu {
+  padding-left: 24px;
+  margin-top: 16px;
+}
+
 @media only screen and (min-width: 640px) {
   footer {
     min-height: 200px;
@@ -21,6 +55,17 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 0px;
+  }
+  .subFooter {
+    border-top: 1px solid #222;
+  }
+  .linksMenu {
+    width: 75%;
+  }
+  .socialMenu {
+    width: 25%;
+    margin-top: 0px;
+    padding-left: 0px;
   }
 }
 
