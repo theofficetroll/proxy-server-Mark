@@ -1,4 +1,6 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-size: 100%;
 }
@@ -6,8 +8,8 @@
 html {
   font-size: 16px;
   line-height: 1.75;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   border: 0;
   font: inherit;
   vertical-align: baseline;
@@ -36,12 +38,10 @@ button {
 
 ul {
   list-style: none;
-  margin: 0px;
 }
 
 input {
   border: 0;
-  margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
