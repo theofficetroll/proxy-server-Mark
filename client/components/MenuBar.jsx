@@ -137,35 +137,60 @@ const menu6 = [
   },
 ]
 
-const MenuBar = () => (
-  <div className={styles.menuBar}>
-    <ul className={styles.navLinks}>
-      <li>
-        <a className={styles.menuHeader} data-menu="1">New Releases</a>
-        <Menu items={menu1} menuNumber="1"/>
-      </li>
-      <li>
-        <a className={styles.menuHeader} data-menu="2">Men</a>
-        <Menu items={menu2} menuNumber="2"/>
-      </li>
-      <li>
-        <a className={styles.menuHeader} data-menu="3">Women</a>
-        <Menu items={menu3} menuNumber="3"/>
-      </li>
-      <li>
-        <a className={styles.menuHeader} data-menu="4">Kids</a>
-        <Menu items={menu4} menuNumber="4"/>
-      </li>
-      <li>
-        <a className={styles.menuHeader} data-menu="5">Customize</a>
-        <Menu items={menu5} menuNumber="5"/>
-      </li>
-      <li>
-      <a className={styles.menuHeader} data-menu="6">Sale</a>
-        <Menu items={menu6} menuNumber="6"/>
-      </li>
-    </ul>
-  </div>
-)
+class MenuBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeMenu: null,
+    }
+  }
+
+  openMenu = (e) => {
+    const menuNumber = e.target.dataset.menu;
+    this.setState({
+      activeMenu: menuNumber
+    })
+  }
+
+  closeMenu = () => {
+    this.setState({
+      activeMenu: null
+    })
+  }
+
+  render() {
+    const { activeMenu } = this.state;
+    return (
+      <div className={styles.menuBar}>
+        <ul className={styles.navLinks}>
+          <li>
+            <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="1">New Releases</a>
+            <Menu items={menu1} menuNumber="1" activeMenu={activeMenu} />
+          </li>
+          <li>
+            <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="2">Men</a>
+            <Menu items={menu2} menuNumber="2" activeMenu={activeMenu} />
+          </li>
+          <li>
+            <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="3">Women</a>
+            <Menu items={menu3} menuNumber="3" activeMenu={activeMenu} />
+          </li>
+          <li>
+            <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="4">Kids</a>
+            <Menu items={menu4} menuNumber="4" activeMenu={activeMenu} />
+          </li>
+          <li>
+            <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="5">Customize</a>
+            <Menu items={menu5} menuNumber="5" activeMenu={activeMenu} />
+          </li>
+          <li>
+          <a className={styles.menuHeader} onMouseEnter={this.openMenu} onMouseLeave={this.closeMenu} data-menu="6">Sale</a>
+            <Menu items={menu6} menuNumber="6" activeMenu={activeMenu} />
+          </li>
+        </ul>
+      </div>
+    )
+  }
+};
 
 export default MenuBar;

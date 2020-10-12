@@ -14,13 +14,15 @@ const MenuColumn = ( {category, links} ) => {
   )
 }
 
-const Menu = ( {items, menuNumber} ) => {
+const Menu = ( {items, menuNumber, activeMenu} ) => {
   const columns = items.map((item, index) => {
     return <MenuColumn category={item.category} links={item.links} key={index} />
-  })
+  });
+
+  const focused = menuNumber === activeMenu ? styles.focused : "";
 
  return (
-  <div className={styles.menu} data-menu={menuNumber}>
+  <div className={cx(styles.menu, focused)} data-menu={menuNumber}>
     <div className={styles.container}>
       {columns}
     </div>
