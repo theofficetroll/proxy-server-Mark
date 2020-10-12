@@ -20,6 +20,18 @@
   border-bottom: 2px solid #000;
 }
 
+.navLinks {
+  display: block;
+  width: calc(100% - 426px);
+  margin: 0 auto;
+  height: 60px;
+  overflow: hidden;
+}
+
+.navLinks li {
+  display: inline-block;
+}
+
 .menu {
   white-space: nowrap;
   opacity: 0;
@@ -47,18 +59,38 @@
   transition: transform .25s ease, opacity 0ms, visibility 0ms;
 }
 
-.navLinks {
-  display: block;
-  width: calc(100% - 426px);
-  margin: 0 auto;
-  height: 60px;
-  overflow: hidden;
+.container {
+  max-width: 1344px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
-.navLinks li {
-  display: inline-block;
+.column {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  min-height: 1px;
+  font-size: 16px;
+  line-height: 1.75;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 16.666666666666664%;
+  padding-top: 16px;
+  text-align: left;
+  vertical-align: top;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform .1s, opacity .1s;
+  transition-delay: 0s;
 }
 
+.menu.focused .column {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .3s ease, opacity .2s linear;
+  transition-delay: .2s;
+}
 
 @media only screen and (min-width: 1024px) {
   .menuBar {

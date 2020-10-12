@@ -17,10 +17,14 @@ const MenuColumn = ( {category, links} ) => {
 
 const Menu = ( {items, menuNumber} ) => {
 
+  const columns = items.map((item, index) => {
+    return <MenuColumn category={item.category} links={item.links} key={index} />
+  })
+
  return (
   <div className={cx(styles.menu, styles.focused)} data-menu={menuNumber}>
-    <div className={styles.columnContainer}>
-      <MenuColumn category={items[0].category} links={items[0].links} />
+    <div className={styles.container}>
+      {columns}
     </div>
   </div>
  )
