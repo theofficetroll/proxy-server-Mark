@@ -1,0 +1,77 @@
+.menuBar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.menuHeader {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 18px;
+  transition: border-color .1s, color .1s;
+  padding-top: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.menuHeader.focused {
+  border-bottom: 2px solid #000;
+}
+
+.menu {
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  max-height: 800px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  transition: transform .1s ease, opacity 0ms linear .1s, visibility 0ms linear .1s;
+  transform-origin: top center;
+  transform: scaleY(0);
+  background: #fff;
+  padding: 40px;
+  padding-top: 16px;
+  width: 100%;
+  z-index: 2;
+}
+
+.menu.focused {
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
+  transition: transform .25s ease, opacity 0ms, visibility 0ms;
+}
+
+.navLinks {
+  display: block;
+  width: calc(100% - 426px);
+  margin: 0 auto;
+  height: 60px;
+  overflow: hidden;
+}
+
+.navLinks li {
+  display: inline-block;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .menuBar {
+    display: flex;
+  }
+  .menuLink {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navLinks {
+    width: calc(100% - 690px);
+  }
+}

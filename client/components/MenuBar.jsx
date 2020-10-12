@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Menu from "./Menu.jsx";
-import styles from './Header.module.css';
+import styles from './MenuBar.module.css';
 
 const menu1 = [
   {
@@ -18,30 +18,23 @@ const MenuBar = () => (
   <div className={styles.menuBar}>
     <ul className={styles.navLinks}>
       <li>
-        <a className={styles.menuLink} data-menu="1">New Releases</a>
+        <a className={styles.menuHeader} data-menu="1">New Releases</a>
         <Menu items={menu1} menuNumber="1"/>
-
-        {/* <div className={styles.menu}>
-          <div>Column: New and Featured
-            <a>Link A: Shoes</a>
-          </div>
-        </div> */}
       </li>
       <li>
-        <a className={styles.menuLink}>Men</a>
-        <Menu />
+        <a className={styles.menuHeader}>Men</a>
       </li>
       <li>
-        <a className={styles.menuLink}>Women</a>
+        <a className={styles.menuHeader}>Women</a>
       </li>
       <li>
-        <a className={styles.menuLink}>Kids</a>
+        <a className={styles.menuHeader}>Kids</a>
       </li>
       <li>
-        <a className={styles.menuLink}>Customize</a>
+        <a className={styles.menuHeader}>Customize</a>
       </li>
       <li>
-        <a className={styles.menuLink}>Sale</a>
+        <a className={styles.menuHeader}>Sale</a>
       </li>
     </ul>
   </div>
