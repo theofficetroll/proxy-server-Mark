@@ -20,7 +20,7 @@ const Menu = ( {items, menuNumber} ) => {
   })
 
  return (
-  <div className={cx(styles.menu, styles.focused)} data-menu={menuNumber}>
+  <div className={styles.menu} data-menu={menuNumber}>
     <div className={styles.container}>
       {columns}
     </div>
