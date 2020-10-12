@@ -4,7 +4,6 @@ import cx from 'classnames';
 import styles from './MenuBar.module.css';
 
 const MenuColumn = ( {category, links} ) => {
-
   const linkItems = links.map((link, index) => <a className={styles.menuItem} key={index} >{link}</a>);
 
   return (
@@ -16,7 +15,6 @@ const MenuColumn = ( {category, links} ) => {
 }
 
 const Menu = ( {items, menuNumber} ) => {
-
   const columns = items.map((item, index) => {
     return <MenuColumn category={item.category} links={item.links} key={index} />
   })
