@@ -9,8 +9,22 @@
   <title>Ultimate Nike</title>
 </head>
 <body>
-  <div id="app"></div>
-  <div id="photo-gallery"></div>
-  <script src="bundle.js"></script>
-  <script src="http://localhost:3000/bundle.js"></script>
+  <div id="header"></div>
+  <div id="main">
+    <div id="left-column">
+      <div id="photo-module"></div>
+    </div>
+    <div id="right-column">
+      <div id="app"></div>
+    </div>
+  </div>
+    <!-- <div id="instagram"></div> -->
+  <div id="recommendations"></div>
+  <div id="footer"></div>
+  <script crossorigin src="http://localhost:3000/bundle-photo-module.js"></script>
+  <!-- <script crossorigin src="http://localhost:3008/product-bundle.js"></script> -->
+    <!-- reviews -->
+  <script src="http://localhost:3003/bundle.js"></script>
+  <script src="/bundle-proxy.js"></script>
+</body>
 </body>
