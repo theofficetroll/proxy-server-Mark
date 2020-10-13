@@ -10,7 +10,7 @@
 .menuHeader {
   border-bottom: 2px solid transparent;
   padding-bottom: 18px;
-  transition: border-color .1s, color .1s;
+  transition: border-color 0.1s, color 0.1s;
   padding-top: 16px;
   padding-left: 8px;
   padding-right: 8px;
@@ -44,7 +44,8 @@
   top: 60px;
   left: 0;
   right: 0;
-  transition: transform .1s ease, opacity 0ms linear .1s, visibility 0ms linear .1s;
+  transition: transform 0.1s ease, opacity 0ms linear 0.1s,
+    visibility 0ms linear 0.1s;
   transform-origin: top center;
   transform: scaleY(0);
   background: #fff;
@@ -58,7 +59,7 @@
   transform: scaleY(1);
   opacity: 1;
   visibility: visible;
-  transition: transform .25s ease, opacity 0ms, visibility 0ms;
+  transition: transform 0.25s ease, opacity 0ms, visibility 0ms;
 }
 
 .container {
@@ -85,15 +86,15 @@
   vertical-align: top;
   opacity: 0;
   transform: translateY(-10px);
-  transition: transform .1s, opacity .1s;
+  transition: transform 0.1s, opacity 0.1s;
   transition-delay: 0s;
 }
 
 .menu.focused .column {
   opacity: 1;
   transform: translateY(0);
-  transition: transform .3s ease, opacity .2s linear;
-  transition-delay: .2s;
+  transition: transform 0.3s ease, opacity 0.2s linear;
+  transition-delay: 0.2s;
 }
 
 .menuItem {

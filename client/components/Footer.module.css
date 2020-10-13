@@ -55,7 +55,8 @@ footer {
   color: #fff;
 }
 
-.footerLink, .footerLink > a {
+.footerLink,
+.footerLink > a {
   color: #7e7e7e;
 }
 
@@ -88,7 +89,7 @@ footer {
   line-height: 1;
   display: flex;
   align-items: flex-end;
-  transition: color .35s ease;
+  transition: color 0.35s ease;
   font-size: 10px;
   font-weight: 400;
 }

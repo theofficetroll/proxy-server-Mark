@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
   </React.StrictMode>,
-  document.getElementById('header'),
+  document.getElementById('header')
 );
 
 // ReactDOM.render(
@@ -25,5 +25,5 @@ ReactDOM.render(
   <React.StrictMode>
     <Footer />
   </React.StrictMode>,
-  document.getElementById('footer'),
+  document.getElementById('footer')
 );
