@@ -1,37 +1,29 @@
 import React from 'react';
 import Footer from '../client/components/Footer.jsx';
 
-const app = mount(<Header />);
-
-const menuBar = mount(<MenuBar />);
+const footer = mount(<Footer />);
 
 beforeEach(async () => {
   // clear component state and reset window width
   global.innerWidth = 1024;
-  await app.unmount();
-  await app.mount();
+  await footer.unmount();
+  await footer.mount();
 });
 
 describe('Component rendering (default 1024px width)', () => {
-  it('should render Header component and sub-components', () => {
-    expect(app).toExist();
-    expect(app.find('.brandHeader')).toExist();
-    expect(app.find('.mainHeader')).toExist();
-    expect(app.find('.banner')).toExist();
-    expect(app.find('.menuBar')).toExist();
+  it('should render Footer component and sub-components', () => {
+    expect(footer).toExist();
+    expect(footer.find('.linksMenu')).toExist();
+    expect(footer.find('.socialMenu')).toExist();
+    expect(footer.find('.countryPin')).toExist();
+    expect(footer.find('.subFooterMenu')).toExist();
   });
 });
 
-describe('Navigation menus', () => {
-  it('should hide menus by default', () => {
-    expect(menuBar.find('.focused')).toEqual({});
-  });
-
-  it('should display menu based on state', () => {
-    menuBar.setState({
-      activeMenu: '3',
-    });
-    menuBar.update();
-    expect(menuBar.find('.focused')).toMatchSelector('[data-menu="3"]');
+describe('Footer links', () => {
+  it('should render links from stored data', () => {
+    const link = footer.find('.linksMenu').childAt(1);
+    console.log(link.html());
+    expect(link).toIncludeText('GET HELP');
   });
 });
