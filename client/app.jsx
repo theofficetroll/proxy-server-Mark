@@ -14,13 +14,6 @@ ReactDOM.render(
   document.getElementById('header')
 );
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Banner />
-//   </React.StrictMode>,
-//   document.getElementById('banner'),
-// );
-
 ReactDOM.render(
   <React.StrictMode>
     <Footer />
