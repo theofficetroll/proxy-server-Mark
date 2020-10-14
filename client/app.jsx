@@ -11,19 +11,12 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
   </React.StrictMode>,
-  document.getElementById('header'),
+  document.getElementById('header')
 );
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Banner />
-//   </React.StrictMode>,
-//   document.getElementById('banner'),
-// );
 
 ReactDOM.render(
   <React.StrictMode>
     <Footer />
   </React.StrictMode>,
-  document.getElementById('footer'),
+  document.getElementById('footer')
 );
