@@ -11,6 +11,6 @@ workflows:
       - aws-code-deploy/deploy:
           application-name: ultimate-nike-proxy
           bundle-bucket: ultimate-nike
-          bundle-key: myS3BucketKey???
+          bundle-key: proxy-server-versions
           deployment-group: everything
           service-role-arn: arn:aws:iam::690705503566:role/CodeDeployServiceRole
