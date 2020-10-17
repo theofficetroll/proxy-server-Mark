@@ -6,11 +6,11 @@ workflows:
   node-tests:
     jobs:
       - node/test
-  deploy_application:
-    jobs:
-      - aws-code-deploy/deploy:
-          application-name: ultimate-nike-proxy
-          bundle-bucket: ultimate-nike
-          bundle-key: proxy-server-versions
-          deployment-group: everything
-          service-role-arn: arn:aws:iam::690705503566:role/CodeDeployServiceRole
+#   deploy_application:
+#     jobs:
+#       - aws-code-deploy/deploy:
+#           application-name: ultimate-nike-proxy
+#           bundle-bucket: ultimate-nike
+#           bundle-key: proxy-server-versions
+#           deployment-group: everything
+#           service-role-arn: arn:aws:iam::690705503566:role/CodeDeployServiceRole
