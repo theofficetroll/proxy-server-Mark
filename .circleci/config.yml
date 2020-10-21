@@ -34,13 +34,13 @@ jobs:
           command: |
             node -v
 workflows:
-  node-tests:
+  test_and_deploy:
     jobs:
       - node/test
-  aws-cli:
-    jobs:
       - aws-cli-example:
-          context: aws
-  deploy:
-    jobs:
+          requires:
+            - node/test  
+            context: aws
       - deploy-ec2
+          requires:
+            - aws-cli-example 
