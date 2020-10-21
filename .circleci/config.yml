@@ -39,8 +39,7 @@ workflows:
       - node/test
       - aws-cli-example:
           requires:
-            - node/test  
-            context: aws
-      - deploy-ec2
+            - node/test
+      - deploy-ec2:
           requires:
             - aws-cli-example 
