@@ -5,6 +5,7 @@ orbs:
 jobs:
   deploy-ec2:
     macos: # this is supposed to be executor -- commands execute in macOS container
+      xcode: "11.3.0"
     steps:
       - run: echo "Hi - print something"
 workflows:
