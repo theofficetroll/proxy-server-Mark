@@ -8,13 +8,13 @@ jobs:
       - image: 'circleci/python:3.7.1'
     steps:
       - aws-cli/install
-      - aws-cli/configure:
-          aws-access-key-id: $AWS_ACCESS_KEY_ID
-          aws-region: $AWS_REGION
+      - aws-cli/setup:
+          profile-name: default
+      - checkout
       - aws-ecs/update-service:
-          family: '${MY_APP_PREFIX}-service'
-          cluster-name: '${MY_APP_PREFIX}-cluster'
-          container-image-name-updates: 'container=${MY_APP_PREFIX}-service,tag=stable'
+          family: '$proxy-service'
+          cluster-name: '$proxy-cluster'
+          container-image-name-updates: 'container=$proxy-service,tag=stable'
 workflows:
   deploy:
     jobs:
