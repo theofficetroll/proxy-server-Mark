@@ -1,16 +1,29 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-  aws-code-deploy: circleci/aws-code-deploy@1.0.1
+jobs:
+  deploy:
+    machine:
+       enabled: true
+    steps:
+      - checkout
+      - run:
+          name: Deploy
+          command: |
+            # - SSH to the server to deploy
+            # Change to your username
+            EC2_USERNAME=ec2-user
+            # Change to your server's URL or public IP
+            EC2_PUBLIC_DNS=ec2-54-215-231-37.us-west-1.compute.amazonaws.com
+            echo 'using SSH to connect to EC2'
+            ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "ls -al; cd hugo-proxy; ls -al; git pull; npm i; pm2 restart proxy"
+            echo 'disconnected from SSH'
+                
 workflows:
-  node-tests:
-    jobs:
-      - node/test
-#   deploy_application:
-#     jobs:
-#       - aws-code-deploy/deploy:
-#           application-name: ultimate-nike-proxy
-#           bundle-bucket: ultimate-nike
-#           bundle-key: proxy-server-versions
-#           deployment-group: everything
-#           service-role-arn: arn:aws:iam::690705503566:role/CodeDeployServiceRole
+   build-and-deploy:
+     jobs:
+       - deploy
+#        - deploy:
+#            requires:
+#              - build # only deploy once build job has completed
+#            filters:
+#              branches:
+#                only: master # only deploy on the master branch
