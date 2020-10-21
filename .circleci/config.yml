@@ -1,10 +1,11 @@
 version: 2.1
+orbs:
+  node: circleci/node@3.0.0
 jobs:
   deploy:
     machine:
        enabled: true
     steps:
-      - checkout
       - run:
           name: Deploy
           command: |
@@ -16,14 +17,14 @@ jobs:
             echo 'using SSH to connect to EC2'
             ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "ls -al; cd hugo-proxy; ls -al; git pull; npm i; pm2 restart proxy"
             echo 'disconnected from SSH'
-                
+
 workflows:
-   build-and-deploy:
+   test-and-deploy:
      jobs:
-       - deploy
-#        - deploy:
-#            requires:
-#              - build # only deploy once build job has completed
-#            filters:
-#              branches:
-#                only: master # only deploy on the master branch
+       - node/test
+       - deploy:
+           requires:
+             - node/test # only deploy once test job has completed
+           filters:
+             branches:
+               only: master # only deploy on the master branch
