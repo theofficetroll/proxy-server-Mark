@@ -1,16 +1,18 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
-  aws-code-deploy: circleci/aws-code-deploy@1.0.1
+aws-ecs: circleci/aws-ecs@1.3.0
+jobs:
+  deploy-ec2
+    steps:
+      - # first step in deployment
 workflows:
   node-tests:
     jobs:
       - node/test
-#   deploy_application:
-#     jobs:
-#       - aws-code-deploy/deploy:
-#           application-name: ultimate-nike-proxy
-#           bundle-bucket: ultimate-nike
-#           bundle-key: proxy-server-versions
-#           deployment-group: everything
-#           service-role-arn: arn:aws:iam::690705503566:role/CodeDeployServiceRole
+  deploy:
+    jobs:
+      - deploy-ec2
+      
+      
+      
