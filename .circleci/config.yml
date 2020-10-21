@@ -1,17 +1,15 @@
 version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@1.3.0
-  aws-ecs: circleci/aws-ecs@0.0.10
 jobs:
   deploy:
     docker:
       - image: 'circleci/python:3.7.1'
     steps:
+      - checkout
       - aws-cli/install
       - aws-cli/setup:
           profile-name: default
-      - checkout
-jobs:
   build:
     docker:
       - image: circleci/openjdk:8-jdk
@@ -34,4 +32,4 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - deploy
+      - build
