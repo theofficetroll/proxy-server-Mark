@@ -28,17 +28,8 @@ jobs:
             # other commands
             # TODO Perform steps to deploy
             ls -al
-            echo 'WTF2'
             # .
             # .
-            echo 'Start deploy'
-            ls -al
-            cd hugo-proxy
-            git pull
-            npm i
-            pm2 restart proxy
-            echo 'Stop deploy'
-            exit
                 
 workflows:
   deploy:
