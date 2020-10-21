@@ -6,7 +6,7 @@ jobs:
   deploy-ec2:
     macos: # this is supposed to be executor -- commands execute in macOS container
     steps:
-      - run: console.log('wtf')
+      - run: echo "Hi - print something"
 workflows:
   node-tests:
     jobs:
