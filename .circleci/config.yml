@@ -24,15 +24,17 @@ jobs:
             # TODO Change to your server's URL or public IP
             EC2_PUBLIC_DNS=ec2-54-215-231-37.us-west-1.compute.amazonaws.com
             ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS \
-            # other commands
-            # TODO Perform steps to deploy
-            ls -al
-            echo '^^^That should look familiar^^^'
-            cd hugo-proxy
-            git pull
-            npm i
-            pm2 restart proxy
-            exit
+                # other commands \
+                # TODO Perform steps to deploy
+                echo 'Start deploy' \
+                ls -al \
+                cd hugo-proxy \
+                git pull \
+                npm i \
+                pm2 restart proxy \
+                echo 'Stop deploy' \
+                exit
+                
 workflows:
   deploy:
     jobs:
