@@ -16,7 +16,7 @@ app.get('*', (req, res) => {
 });
 
 // port 4000 for the proxy server
-const port = 4000;
+const port = 80;
 
 app.listen(port, () => {
   console.log(`Hugo's proxy server listening on port ${port}`);
