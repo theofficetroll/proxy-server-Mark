@@ -7,7 +7,6 @@ import styles from './Header.module.css';
 const Header = () => {
   return (
     <>
-      <h1>THIS CHANGE IN JSX FILES SHOULD SHOW UP</h1>
       <div className={styles.brandHeader}>
         <div className={styles.headerWrapper}>
           <ul className={styles.brandIcons}>
