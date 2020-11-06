@@ -10,10 +10,8 @@ jobs:
           name: Deploy
           command: |
             # - SSH to the server to deploy
-            # Change to your username
             EC2_USERNAME=ec2-user
-            # Change to your server's URL or public IP
-            EC2_PUBLIC_DNS=ec2-54-215-231-37.us-west-1.compute.amazonaws.com
+            EC2_PUBLIC_DNS=ec2-3-101-79-33.us-west-1.compute.amazonaws.com
             echo 'using SSH to connect to EC2'
             ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "cd hugo-proxy; git pull; npm i; pm2 restart proxy"
             echo 'disconnected from SSH'
