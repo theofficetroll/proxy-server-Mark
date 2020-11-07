@@ -86,10 +86,21 @@ ul {
   }
   #right-column {
     width: 456px;
+    max-width: 456px;
     padding-right: 48px;
     padding-left: 24px;
     padding-top: 4px;
     margin-top: 48px;
     margin-right: 7px;
   }
+  #inventory {
+    margin-top: 32px;
+  }
+}
+
+/* edits to other service components */
+#inventory {
+  padding: 0px;
+  width: 100%;
+  margin-top: 32px;
 }
