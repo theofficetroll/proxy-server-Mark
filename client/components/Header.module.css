@@ -67,6 +67,10 @@
   overflow: hidden;
 }
 
+.nikeIcon {
+  padding-left: 14px;
+}
+
 .searchBar {
   width: 180px;
   /* position: absolute;

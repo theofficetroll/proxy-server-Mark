@@ -2,6 +2,7 @@
   box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px inset;
   background: rgb(247, 247, 247);
   min-height: 60px;
+  height: 60px;
   overflow: hidden;
   position: relative;
 }
@@ -11,6 +12,7 @@
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  height: 100%;
 }
 
 .carousel {
@@ -19,6 +21,29 @@
   color: rgb(34, 34, 34);
   font-weight: 500;
   line-height: 1.5;
-  text-transform: uppercase;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.message {
+  min-height: 6px;
+  margin: 0px auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  zoom: 1;
   text-align: center;
+  /* max-width: 320px; */
+}
+
+.message span {
+  padding: 0px 8px;
+  text-transform: uppercase;
+}
+
+.message a {
+  text-decoration: underline;
 }
