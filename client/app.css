@@ -114,3 +114,11 @@ ul {
 #reviews-module {
   padding-top: 40px;
 }
+
+#recommendations-module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow-x: hidden;
+}
