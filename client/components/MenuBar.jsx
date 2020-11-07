@@ -374,12 +374,18 @@ class MenuBar extends React.Component {
             <a
               className={styles.menuHeader}
               onMouseEnter={this.openMenu}
-              onMouseLeave={this.closeMenu}
+              // onMouseLeave={this.closeMenu}
               data-menu="1"
             >
               New Releases
             </a>
-            <Menu items={menu1} menuNumber="1" activeMenu={activeMenu} />
+            <Menu
+              items={menu1}
+              menuNumber="1"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
           <li>
             <a
@@ -390,7 +396,13 @@ class MenuBar extends React.Component {
             >
               Men
             </a>
-            <Menu items={menu2} menuNumber="2" activeMenu={activeMenu} />
+            <Menu
+              items={menu2}
+              menuNumber="2"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
           <li>
             <a
@@ -401,7 +413,13 @@ class MenuBar extends React.Component {
             >
               Women
             </a>
-            <Menu items={menu3} menuNumber="3" activeMenu={activeMenu} />
+            <Menu
+              items={menu3}
+              menuNumber="3"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
           <li>
             <a
@@ -412,7 +430,13 @@ class MenuBar extends React.Component {
             >
               Kids
             </a>
-            <Menu items={menu4} menuNumber="4" activeMenu={activeMenu} />
+            <Menu
+              items={menu4}
+              menuNumber="4"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
           <li>
             <a
@@ -423,7 +447,13 @@ class MenuBar extends React.Component {
             >
               Customize
             </a>
-            <Menu items={menu5} menuNumber="5" activeMenu={activeMenu} />
+            <Menu
+              items={menu5}
+              menuNumber="5"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
           <li>
             <a
@@ -434,7 +464,13 @@ class MenuBar extends React.Component {
             >
               Sale
             </a>
-            <Menu items={menu6} menuNumber="6" activeMenu={activeMenu} />
+            <Menu
+              items={menu6}
+              menuNumber="6"
+              activeMenu={activeMenu}
+              openMenu={this.openMenu}
+              closeMenu={this.closeMenu}
+            />
           </li>
         </ul>
       </div>

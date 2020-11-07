@@ -18,7 +18,7 @@ const MenuColumn = ({ category, links }) => {
   );
 };
 
-const Menu = ({ items, menuNumber, activeMenu }) => {
+const Menu = ({ items, menuNumber, activeMenu, openMenu, closeMenu }) => {
   const columns = items.map((item, index) => {
     return (
       <MenuColumn category={item.category} links={item.links} key={index} />
@@ -28,7 +28,12 @@ const Menu = ({ items, menuNumber, activeMenu }) => {
   const focused = menuNumber === activeMenu ? styles.focused : '';
 
   return (
-    <div className={cx(styles.menu, focused)} data-menu={menuNumber}>
+    <div
+      className={cx(styles.menu, focused)}
+      data-menu={menuNumber}
+      onMouseEnter={openMenu}
+      onMouseLeave={closeMenu}
+    >
       <div className={styles.container}>{columns}</div>
     </div>
   );

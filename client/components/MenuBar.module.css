@@ -35,7 +35,7 @@
   height: 100%;
 }
 
-.navLinks a {
+.navLinks li > a {
   display: inline-block;
   height: 100%;
 }
