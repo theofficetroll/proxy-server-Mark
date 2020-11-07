@@ -6,6 +6,7 @@ import './app.css';
 
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import Description from './components/Description.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,4 +20,11 @@ ReactDOM.render(
     <Footer />
   </React.StrictMode>,
   document.getElementById('footer')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Description />
+  </React.StrictMode>,
+  document.getElementById('description-module')
 );

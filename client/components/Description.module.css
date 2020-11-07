@@ -1,0 +1,36 @@
+.wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 16px;
+}
+
+.text {
+  line-height: 1.75;
+}
+
+.list {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  list-style: none;
+}
+
+.list li {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+.wrapper button {
+  box-shadow: inset 0 -1px 0 0 #111;
+  padding-bottom: 2px;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
