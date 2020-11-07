@@ -21,6 +21,7 @@
   align-items: center;
   position: relative;
   max-width: 1920px;
+  height: 100%;
   opacity: 1;
   padding: 0 14px 0 16px;
   margin: 0 auto;
@@ -72,9 +73,11 @@
   right: 0; */
   float: right;
   position: relative;
-  top: 6px;
+  top: 9px;
   transform: translateX(0);
   transition: width 0.25s, transform 0.35s;
+  display: flex;
+  align-items: center;
 }
 
 .searchBar input {
@@ -146,7 +149,7 @@
     cursor: text;
   }
   .searchBar button {
-    top: 2px;
+    /* top: 2px; */
     left: 2px;
     padding: 6px 8px;
   }
