@@ -71,6 +71,8 @@
   /* position: absolute;
   right: 0; */
   float: right;
+  position: relative;
+  top: 6px;
   transform: translateX(0);
   transition: width 0.25s, transform 0.35s;
 }
@@ -149,6 +151,6 @@
     padding: 6px 8px;
   }
   .accountBtns {
-    padding-top: 12px;
+    /* padding-top: 12px; */
   }
 }

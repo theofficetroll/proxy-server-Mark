@@ -32,6 +32,12 @@
 
 .navLinks li {
   display: inline-block;
+  height: 100%;
+}
+
+.navLinks a {
+  display: inline-block;
+  height: 100%;
 }
 
 .menu {
