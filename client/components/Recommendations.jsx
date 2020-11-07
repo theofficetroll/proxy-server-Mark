@@ -5,21 +5,39 @@ import styles from './Recommendations.module.css';
 const Recommendations = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.preview}>
-        <p className={styles.text}>
-          Reinvigorate your stride with the Nike Air Zoom Pegasus 37. Delivering
-          the same fit and feel that runners love, the shoe has an all-new
-          forefoot cushioning unit and foam for maximum responsiveness. The
-          result is a durable, lightweight trainer designed for everyday
-          running.
-        </p>
-        <ul className={styles.list}>
-          <li>Shown: Black/Light Arctic Pink/White/Metallic Red Bronze</li>
-          <li>Style: BQ9647-007</li>
-        </ul>
-        <button>View Product Details</button>
+      <div className={styles.header}>YOU MIGHT ALSO LIKE</div>
+      <div className={styles.carousel}>
+        <div className={styles.card}>
+          <a href="">
+            <img src="https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-001.jpg" />
+          </a>
+          <div className={styles.info}>
+            <div className={styles.name}>Nike React Infinity Run Flyknit</div>
+            <div className={styles.type}>Women's Running Shoe</div>
+            <div className={styles.price}>$160</div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <a href="">
+            <img src="https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/2-001.jpg" />
+          </a>
+          <div className={styles.info}>
+            <div className={styles.name}>Nike Air Zoom Winflo 7</div>
+            <div className={styles.type}>Women's Running Shoe</div>
+            <div className={styles.price}>$90</div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <a href="">
+            <img src="https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/3-001.jpg" />
+          </a>
+          <div className={styles.info}>
+            <div className={styles.name}>Nike React Phantom RUn Flyknit 2 Premium</div>
+            <div className={styles.type}>Women's Running Shoe</div>
+            <div className={styles.price}>$140</div>
+          </div>
+        </div>
       </div>
-      <div className={styles.modal} />
     </div>
   );
 };
