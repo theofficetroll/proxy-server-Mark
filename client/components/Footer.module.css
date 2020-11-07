@@ -145,6 +145,7 @@ footer {
     width: 25%;
     margin-top: 0px;
     padding-left: 0px;
+    text-align: right;
   }
   .accordion {
     width: 33.333333%;
@@ -156,6 +157,9 @@ footer {
   .subFooter > div {
     display: flex;
     align-items: center;
+  }
+  .subFooterMenuWrapper {
+    justify-content: flex-end;
   }
   .copyright {
     display: inline-block;

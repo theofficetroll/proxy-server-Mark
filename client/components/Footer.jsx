@@ -112,7 +112,7 @@ const Footer = () => {
               © 2020 Nike, Inc. All Rights Reserved
             </div>
           </div>
-          <div>
+          <div className={styles.subFooterMenuWrapper}>
             <ul className={styles.subFooterMenu}>
               <li>
                 <div className={styles.footerLink}>Guides [MENU]</div>
