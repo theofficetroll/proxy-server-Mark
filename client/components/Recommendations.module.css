@@ -1,0 +1,43 @@
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(12, calc(33.3333% - var(--grid-gap, 16px)));
+  grid-gap: var(--grid-gap, 16px);
+}
+
+.card {
+  padding: 0 8px;
+  margin-bottom: 28px;
+  max-width: 592px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info {
+  font-size: 14px;
+  padding: 12px 12px 0px;
+  line-height: 20px;
+  min-height: 0px;
+  position: relative;
+}
+
+.name {
+  color: rgb(17, 17, 17);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.type {
+  color: rgb(117, 117, 117);
+  line-height: 20px;
+}
+
+.price {
+  padding-top: 12px;
+  line-height: 20px;
+  padding-right: 16px;
+  font-weight: 500;
+}
